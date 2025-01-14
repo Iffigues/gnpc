@@ -1,5 +1,11 @@
 <?php
 
+function have($str, $i, $array) {
+    foreach ($array as $value) {
+        
+    }
+}
+
 function gnpc($text, $asp_like=false) {
     $e = [];
     $open = [
@@ -12,8 +18,7 @@ function gnpc($text, $asp_like=false) {
     for ($i = 0; $i < strlen($text); $i = $i) {
         $o = $i;
         if ($text[$i] == "<") {
-            $i = 100;
-            continue;
+            
         }
         while ($text[$o] != "<") {
             $o = $o + 1;
