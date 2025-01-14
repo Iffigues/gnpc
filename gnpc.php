@@ -3,7 +3,7 @@
 function gnpc($text) {
     $open = ["<?php", "<?=", "<?", "<%"];
     $close = ["?>", "%>"];
-    $reg = "(<\?php=|<\?=|<\?|<%)[.]*(\?>|%>)"
+    $reg = "<(\?php|\?=|\?|%)[.]*(\?>|%>)?"
 }
 
 function gnpc_from_file(string $file) {

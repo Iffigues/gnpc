@@ -1,5 +1,10 @@
 <?php
 #?>
 echo "aaaa";
+<?php
+echo "ezez";
 //?>
-echo("zzz"); 
+<?php
+
+echo ("zzz"); 
+?>
