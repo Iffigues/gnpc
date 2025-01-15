@@ -2,7 +2,7 @@
 
 function have($str, $i, $array) {
     foreach ($array as $value) {
-        
+        echo $value."\n";        
     }
 }
 
@@ -14,18 +14,17 @@ function gnpc($text, $asp_like=false) {
         "<?"=> "?>"
     ];
     if ($asp_like) $open["<%"] = "%>";
+    $key = array_keys($open);
 
     for ($i = 0; $i < strlen($text); $i = $i) {
         $o = $i;
-        if ($text[$i] == "<") {
-            
-        }
-        while ($text[$o] != "<") {
-            $o = $o + 1;
-        }
-        echo substr($text, $i, $o);
+        
+        if ($text[$i] == "<") 
+            $o = have($text, $i, $key);
+        else
+            while ($text[$o] != "<")  $o = $o + 1;
+        array_push($e, substr($text, $i, $o));
         $i = $o;
-        echo($text[$i]); 
     }
 }
 
